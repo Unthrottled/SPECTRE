@@ -1,1 +1,51 @@
+/*
+ * ////////////////////////////////////////////////////////////////////////////////
+ * //SECURITY CLASSIFICATION: UNCLASSIFIED
+ * ///////////////////////////////////////////////////////////////////////////////
+ *
+ * UNLIMITED RIGHTS
+ *
+ * DFARS Clause reference 252.227-7013(a)(16) and 252.227-7014(a)(16)
+ *
+ * Unlimited Rights.  The Government has the right to use, modify, reproduce, release, perform
+ * display or disclose this (technical data or computer software) in whole or in part, in
+ * any manner, and for any purpose whatsoever, and to have or authorize others to do so.
+ *
+ * Distribution Statement D. Distribution authorized to the Department of Defense and
+ * U.S. DoD contractors only in support of US DoD efforts.  Other requests shall be
+ * referred to the Program Executive Officer, USTRANSCOM
+ *
+ * Warning: This document contains data whose export is restricted by the Arms Export
+ * Control Act (Title 22, U.S.C., Section 2751, et seq.) as amended, or the Export Administration
+ * Act (Title 50, U.S.C., App 2401 et seq.) as amended. Violations of these Export Administration
+ * are subject to severe criminal and civil penalties.  Disseminate in accordance with
+ * provisions of DoD directive 5230.25
+ */
 apply plugin: 'java'
+
+repositories {
+    maven {
+        url "http://amc.spawar.navy.mil/nexus/content/groups/deploy/"
+    }
+}
+
+dependencies {
+    compile "com.hazelcast:hazelcast-all:3.4.2"
+    compile "mil.af.amc.ait.meis-clients.services:mobility-air-mission-web-service-1.1:1.1-11.04.27v4"
+    compile "mil.af.amc.ait.meis-clients.services:mission-detail-service:1.1-12.07.18v4"
+    compile "mil.af.amc.ait.meis-clients.services:airfield-detail-service:2.0-11.06.23v5"
+    compile "mil.af.amc.ait.meis-clients.services:mission-execution-service:1.0-09.07.09v1"
+    compile "mil.af.amc.ait.meis-clients.services:mobility-crew-service:1.1-12.03.30v4"
+    compile "mil.af.amc.ait.meis-clients.services:sortie-human-remains-service:1.1-11.03.11v4"
+    compile "mil.af.amc.ait.meis-clients.services:sortie-load-service:1.1-11.01.25v4"
+    compile "mil.af.amc.ait.meis-clients.services:sortie-cargo-service:1.1-10.10.19v4"
+    compile "mil.af.amc.ait.meis-clients.services:sortie-passenger-service:1.1-10.10.19v4"
+    compile "mil.af.amc.ait.meis-clients.services:airfield-suitability-service:2.0-12.04.19v4"
+    compile "mil.af.amc.ait.meis-clients.services:mobility-tasks-service:1.2-14.01.27v4"
+    compile "mil.af.amc.ait.meis-clients.services:mobility-air-mission-web-service-1.2:1.2-14.07.21v4"
+    compile "mil.af.amc.ait.meis-clients.services:mobility-aircraft-service:1.0.1.3v2"
+    compile "mil.af.amc.ait.meis-clients.services:mobility-airspace-service:1.1-10.10.01"
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'log4j:log4j:1.2.17'
+    testCompile "junit:junit:4.12"
+}
